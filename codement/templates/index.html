@@ -1,0 +1,626 @@
+<!--
+██╗  ██╗███████╗██╗     ██╗      ██████╗     ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗
+██║  ██║██╔════╝██║     ██║     ██╔═══██╗    ██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗
+███████║█████╗  ██║     ██║     ██║   ██║    ██║ █╗ ██║██║   ██║██████╔╝██║     ██║  ██║
+██╔══██║██╔══╝  ██║     ██║     ██║   ██║    ██║███╗██║██║   ██║██╔══██╗██║     ██║  ██║
+██║  ██║███████╗███████╗███████╗╚██████╔╝    ╚███╔███╔╝╚██████╔╝██║  ██║███████╗██████╔╝
+╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝      ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <title>CODEMENT</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Styling and fonts for Join now and sky is limit effects-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+
+    
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+
+
+    <!-- HOSTED -->
+    <link href="css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/fonts/mdi/css/materialdesignicons.min.css' %}"  media="all" rel="stylesheet">
+  
+    <!-- LOCAL -->
+    <link rel="stylesheet" href="{% static 'assets/style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/style/about.css' %}">
+    
+
+    <!-- HOSTED -->
+    <script src="{% static 'assets/ajax/prefixfree.min.js' %}"></script>
+    <script src="{% static 'assets/ajax/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/ajax/jquery.mixitup.min.js' %}"></script>
+    <script src="{% static 'assets/ajax/jquery.waypoints.min.js' %}"></script>
+
+
+    <!-- LOCAL -->
+    <script src="{% static 'assets/scripts/pt.min.js' %}"></script>
+    <script src="{% static 'assets/scripts/index.js' %}"></script>
+    <script src="{% static 'assets/scripts/bootstrap.bundle.js' %}"></script>
+
+    
+    
+
+  </head>
+
+  <body>
+
+
+    <!-- Code for message flashing -->
+  <style>
+    #messages-container {
+      position: fixed;
+      top: 1%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+    }
+  </style>
+
+  {% if messages %}
+    <div id="messages-container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                
+            </div>
+        {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- JQuery code to dismiss messages -->
+  <script>
+      window.setTimeout(function() {
+          $(".alert").fadeTo(500, 0).slideUp(500, function(){
+              $(this).remove(); 
+          });
+      }, 3000);
+  </script>
+  <!-- End flashing code -->
+   
+
+    <div class="">
+      <section id="home" class="height-fix">
+        
+
+          <div class="homebg">
+            <div id="particles-js">
+
+              <div id="blob"></div>
+      
+              <h1 id="hometext" data-value="CODEMENT">CODEMENT</h1>
+              <spanc class="spanc loader">
+                <span class="m spanc">E</span>
+                <span class="m spanc">N</span>
+                <span class="m spanc">V</span>
+                <span class="m spanc">I</span>
+                <span class="m spanc">R</span>
+                <span class="m spanc">O</span>
+                <span class="m spanc">N</span>
+                <span class="m spanc">M</span>
+                <span class="m spanc">E</span>
+                <span class="m spanc">N</span>
+                <span class="m spanc">T</span>
+                <span class="m spanc">&nbsp;</span>
+                <span class="m spanc">F</span>
+                <span class="m spanc">O</span>
+                <span class="m spanc">R</span>
+                <span class="m spanc">&nbsp;</span>
+                <span class="m spanc">C</span>
+                <span class="m spanc">O</span>
+                <span class="m spanc">D</span>
+                <span class="m spanc">E</span>
+                <span class="m spanc">R</span>
+                <span class="m spanc">S</span>
+              </spanc>
+            </div>
+          </div>
+          
+          <nav class="flex">
+            <div class="link-wrap">
+              <div class="active page-link" dest="home">home</div>
+              <div class="page-link" dest="about">Oceans</div>
+              <div class="page-link" dest="portfolio">Let's Start</div>
+              <div class="page-link" dest="contact">Querybox</div>
+              <div class="page-link" dest=""><a href="/codement">Codement 2.0</a></div>
+              
+            </div>
+            <i class="mdi mdi-menu"></i>
+          </nav>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="container flex">
+          <div class="header waypoint" data-animation="slide-in-left">
+            OCEANS
+          </div>
+          <div class="header-bar waypoint" data-animation="slide-in-left" data-delay=".5s"></div>
+          <div class="flex row label-wrap">
+
+            <div class="flex row-gt-sm ">
+              <div class="flex bullet-wrap "  style="padding-right: 40px;  padding-left: 40px;" >
+                <div class="hex-wrap waypoint" data-animation="flip-in-x">
+                  <a href="https://www.geeksforgeeks.org/roadmap-to-become-a-web-developer-in-2022/" target="_blank">
+                    <img src="{% static 'assets/img/codement_web_development.png' %}" alt="" height="85px" width="110px">
+                  </a>
+                </div>
+                <br>
+                <div class="waypoint" data-animation="fade-in">
+                  <div class=" bold">Web <br> Development</div>
+                </div>
+              </div>
+
+              <div class="flex bullet-wrap " style="padding-right: 40px;  padding-left: 40px;">
+                <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay=".2s">
+                  <a href="https://workat.tech/problem-solving/article/competitive-programming-complete-roadmap-from-scratch-sbcrmnxb1sfg" target="_blank">
+                    <img src="{% static 'assets/img/codement_cp.png' %}" alt="" height="85px" width="85px">
+                  </a>
+                </div>
+                <br>
+                <div class="waypoint" data-animation="fade-in" data-delay=".2s">
+                  <div class=" bold">Competitive <br> Programming</div>
+                </div>
+              </div>
+
+              <div class="flex bullet-wrap " style="padding-right: 40px;  padding-left: 40px;">
+                <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay=".4s">
+                  <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/Android-Development" target="_blank">
+                    <img src="{% static 'assets/img/codement_app_development.png' %}" alt="" height="85px" width="85px">
+                  </a>
+                </div>
+                <br>
+                <div class="waypoint" data-animation="fade-in" data-delay=".4s">
+                  <div class=" bold">App <br> Development</div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="flex row-gt-sm">
+              <div class="flex row-gt-sm ">
+                <div class="flex bullet-wrap "  style="padding-right: 40px; padding-left: 40px;" >
+                  <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay="0.6s">
+                    <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/Open-Source" target="_blank">
+                      <img src="{% static 'assets/img/codement_open_source.png' %}" alt="" height="85px" width="110px">
+                    </a>
+                  </div>
+                  <br>
+                  <div class="waypoint" data-animation="fade-in" data-delay="0.6s">
+                    <div class=" bold">Open Source</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex row-gt-sm ">
+                <div class="flex bullet-wrap "  style="padding-right: 40px;  padding-left: 40px;" >
+                  <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay="0.8s">
+                    <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/Blockchain" target="_blank">
+                      <img src="{% static 'assets/img/codement_blockchain.png' %}" alt="" height="85px" width="110px">
+                    </a>
+                  </div>
+                  <br>
+                  <div class="waypoint" data-animation="fade-in" data-delay="0.8s">
+                    <div class=" bold">Blockchain</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex bullet-wrap " style="padding-right: 40px;  padding-left: 40px;">
+                <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay="1s">
+                  <a href="https://github.com/s0md3v/be-a-hacker" target="_blank">
+                    <img src="{% static 'assets/img/codement_ethical_hacking.png' %}" alt="" height="85px" width="85px">
+                  </a>
+                </div>
+                <br>
+                <div class="waypoint" data-animation="fade-in" data-delay="1s">
+                  <div class="bold">Cyber Security &<br>Ethical Hacking</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="skills-wrapper flex row-gt-sm">
+            <div class="flex flex-50-gt-sm waypoint" data-animation="slide-in-left">
+              <div class="label bold">
+                <h1 style="color:rgb(10, 10, 83)";> CODEMENT </h1></div>
+              <div>
+                <p>
+                  <h2 class="text"> Let's create together an <b class="bo">Environment </b>for coders, where we <b class="bo">Learn & Code</b> together.
+                    Where we <b class="bo"> Upskill & Grow </b>together.
+                  </h2>
+                </p>
+                <br>
+                  <h2 class="text">
+                      Join our whatsapp group & become a part of an aspiring community.
+                  </h2>
+               <div>
+                        <a href="https://chat.whatsapp.com/C6yXU9ep9oQ0fUrD2CwXK0" target="_blank">
+                          <h1 class="st">
+                            <span class="magic">
+                              <span class="magic-star">
+                                <svg viewBox="0 0 512 512">
+                                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                                </svg>
+                              </span>
+                              <span class="magic-star">
+                                <svg viewBox="0 0 512 512">
+                                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                                </svg>
+                              </span>
+                              <span class="magic-star">
+                                <svg viewBox="0 0 512 512">
+                                <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                                </svg>
+                              </span>
+                              <span class="magic-text"><b>Join now </b></span>
+                            </span>
+                          </h1>
+                        </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <br><br>
+          
+
+          <div  id="comments" class="flex flex-gt-sm waypoint" data-animation="slide-in-right">
+            <h1 style="color:rgb(10, 10, 83)";">How our Community works !!</h1>
+            <h3>
+            <ul style=" color: black; ">
+              <strong>
+              <li>Our community will guide you for anything that you wish to learn.</li>
+              <li>We are here to help you learn and upgrade your skills.</li>
+              <li>After a certain level of experience you can join us to work together on amazing projects.</li>
+              </strong>
+            </ul>
+            </h3>
+          </div>
+          <br>
+
+
+          <div id="comments" class="flex flex-gt-sm waypoint" data-animation="slide-in-left" >
+            <h4>
+            <ul>
+              <h1 class="bo">Lessons worth Remembering</h1>
+              <li>
+                  <h2>
+                    <b style="color: rgb(170, 17, 17);">
+                      Code Everyday
+                    </b>
+                  </h2>
+                
+                  <div class="comcont">
+                    <p style="color: black;">As a growing Engineer, the best thing you could do is code everyday. Coding is indeed amongst the fastest growing
+                      fields. There are thousands of opportunities waiting for you, so code everyday & never miss twice.
+                    </p>
+                  </div>
+              </li>
+              <li>
+                  <h2>
+                    <b style="color: rgb(170, 17, 17);">
+                      Skills over Degree
+                    </b>
+                  </h2>
+                  <div class="comcont">
+                    <p style="color: black;">Long gone those days where your marks on the sheet mattered. This is the era of skills where what you can do & how 
+                      good you can do have more dynamics over a degree.
+                    </p>
+                  </div>
+              </li>
+              <li>
+                  <h2>
+                    <b style="color: rgb(170, 17, 17);">
+                      Self Learning
+                    </b>
+                  </h2>
+                  <div class="comcont">
+                    <p style="color: black;">Anything that you wish to learn is just a few clicks away. What you really need is the right mindset to learn.
+                      build constructive habits & take constructive actions. Explore Everything & Learn Everyday.
+                    </p>
+                  </div>
+              </li>
+            </ul>
+            </h4>
+          </div>
+
+        </div>
+      </section>
+
+      <div id="left-side" class="side">
+        <h2 class="title">
+          How can you say sky<br> is the &nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="fancy">Limit</span>      
+        </h2>
+      </div>
+      <div id="right-side" class="side">
+        <h2 class="title">
+          When there is a foot<br> on the &nbsp;&nbsp;&nbsp;&nbsp; 
+          <span class="fancy">Moon</span>     
+        </h2>
+      </div>
+
+
+      <!-- PORTFOLIO -->
+      <section class="flex" id="portfolio" style="margin-top: 600px;">
+        <div class="header waypoint" data-animation="slide-in-right">
+          Let's Start
+        </div>
+        <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".3s"></div>
+
+        <div class="filter-wrap waypoint" data-animation="fade-in">
+          <div class="">
+            <div class="">
+              <div class="filter" data-filter="all"></div>
+              <div class="filter" data-filter=".rails"></div>
+              <div class="filter" data-filter=".react"></div>
+              <div class="filter" data-filter=".js"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="gallery" class="container flex row wrap waypoint">
+          <div class="mix react" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Web Development</div>
+                <span class="highlight"></span>
+              </div>
+              <a href="https://www.geeksforgeeks.org/roadmap-to-become-a-web-developer-in-2022/" target="_blank"><div class="button">DIVE IN</div></a>
+            </div>
+          </div>
+
+          <div class="mix react" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Competitive Programming</div>
+                <span class="highlight"></span>
+              </div>
+              <a href="https://workat.tech/problem-solving/article/competitive-programming-complete-roadmap-from-scratch-sbcrmnxb1sfg" target="_blank"><div class="button">DIVE IN</div></a>
+            </div>
+          </div>
+
+          <div class="mix react" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">App Development</div>
+                <span class="highlight"></span>
+              </div>
+              <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/Android-Development" target="_blank"><div class="button">DIVE IN</div></a>
+            </div>
+          </div>
+
+          <div class="mix js" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Game Development</div>
+                <span class="highlight"></span>
+              </div>
+              <a href="https://medium.datadriveninvestor.com/roadmap-to-becoming-a-game-developer-in-2022-128fed2df6c5" target="_blank"><div class="button">DIVE IN</div></a>
+            </div>
+          </div>
+
+          <div class="mix rails" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Designing</div>
+                <span class="highlight"></span>
+              </div>
+              <a href="https://bootcamp.uxdesign.cc/the-self-taught-ui-ux-designer-roadmap-in-2021-aa0f5b62cecb" target="_blank"><div class="button">DIVE IN</div></a>
+            </div>
+          </div>
+
+          <div class="mix js" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Cyber Security & Ethical Hacking</div>
+                <span class="highlight"></span>
+              </div>
+              <a href="https://github.com/s0md3v/be-a-hacker" target="_blank"><div class="button">DIVE IN</div></a>
+            </div>
+          </div>
+
+          <div class="mix js" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Open Source</div>
+                <span class="highlight"></span>
+              </div>
+              <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/Open-Source" target="_blank"><div class="button">DIVE IN</div></a>
+            </div>
+          </div>
+
+          <div class="mix js" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Blockchain</div>
+                <span class="highlight"></span>
+              </div>
+              <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/Blockchain" target="_blank"><div class="button">DIVE IN</div></a>
+            </div>
+          </div>
+
+          <div class="mix js" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Devops</div>
+                <span class="highlight"></span>
+              </div>
+              <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/DevOps" target="_blank"><div class="button">DIVE IN</div></a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section id="blog">
+        <div class="container flex">
+          <div class="header waypoint" data-animation="slide-in-left">Coding Channels</div>
+          <div class="header-bar waypoint" data-animation="slide-in-left" data-delay=".5s"></div>
+
+          <div class="flex row wrap">
+            <div class="flex row-gt-sm">
+              <a href="https://www.youtube.com/@CodeWithHarry" target="_blank">
+                <div class="blog-wrap waypoint" data-animation="fade-in">
+                  <div class="fade-wrap">
+                    <div class="thumb" id="thumb-1"></div>
+                    <div class="label bold">Code With Harry</div>
+                    <div class="bar"></div>
+                    <div class="text">
+                      God of Programming, Best quality courses in hindi about Python, Java, Javascript, App Dev, Web Dev & what not. Project
+                      based learning.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="https://www.youtube.com/@ApnaCollegeOfficial" target="_blank">
+                <div class="blog-wrap waypoint" data-animation="fade-in" data-delay=".2s">
+                  <div class="fade-wrap">
+                    <div class="thumb" id="thumb-2"></div>
+                    <div class="label bold">Apna College</div>
+                    <div class="bar"></div>
+                    <div class="text">
+                      It's our Aman Bhaiya's Channel with everything about coding & placement, India's most loved channel by College
+                      students. Full C & C++ courss & Beginner Web Development.
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="flex row-gt-sm">
+              <a href="https://www.youtube.com/@freecodecamp" target="_blank">
+                <div class="blog-wrap waypoint" data-animation="fade-in" data-delay=".4s">
+                  <div class="fade-wrap">
+                    <div class="thumb" id="thumb-3"></div>
+                    <div class="label bold">FreeCodeCamp</div>
+                    <div class="bar"></div>
+                    <div class="text">
+                      Preety much everything about coding in English. Devops, Cyber Security, Game development with python & Unity.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="https://www.youtube.com/@CodingNinjasIndia/featured" target="_blank">
+                <div class="blog-wrap waypoint" data-animation="fade-in" data-delay=".6s">
+                  <div class="fade-wrap">
+                    <div class="thumb" id="thumb-4"></div>
+                    <div class="label bold">Coding Ninjas</div>
+                    <div class="bar"></div>
+                    <div class="text">Professional platform for learning data Science & DSA. Provides great certified courses
+                      and complete placement assistance.
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <svg preserveaspectratio="none" viewbox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+          <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+        </svg>
+        <div class="container flex">
+          <div class="header waypoint" data-animation="slide-in-left">
+            <a> CONTACT </a>
+          </div>
+          <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".25s"></div>
+          <div class="highlight waypoint" data-animation="slide-in-right" data-delay=".5s">
+            Have a question ? Reach out to us!!
+          </div>
+          <form class="waypoint" data-animation="pop-in" data-delay=".5s" id="" action="{% url 'index' %}" method="post" name="sentMessage">
+            {% csrf_token %}
+            <input placeholder="Name" id="name" type="text" name="name" required="" maxlength="40">
+            <input placeholder="Enter email" type="email" id="email" name="email" required="" maxlength="40">
+            <textarea placeholder="Your Message" type="text" id="message" name="message" required="" maxlength="700"></textarea>
+            <div id="success">
+              <div>
+                Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span>
+              </div>
+            </div>
+            <input class="button" type="submit" id="submit" value="SUBMIT">
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <i class="mdi mdi-chevron-double-up page-link" dest="home"></i>
+
+        <div class="icon-wrap flex row">
+          <a href="https://www.linkedin.com/in/narendra-rathore-2b06a1222/" target="_blank">
+            <div class="flex icon" id="icon-2">
+              <i class="mdi mdi-linkedin"></i>
+            </div>
+          </a>
+          <a href="https://chat.whatsapp.com/C6yXU9ep9oQ0fUrD2CwXK0" target="_blank">
+            <div class="flex icon" id="icon-3">
+              <i class="mdi mdi-whatsapp"></i>
+            </div>
+          </a>
+          <a href="mailto:codement13@gmail.com" target="_blank">
+            <div class="flex icon" id="icon-4">
+              <i class="mdi mdi-gmail"></i>
+            </div>
+          </a>
+          <a href="https://github.com/narendra632" target="_blank">
+            <div class="flex icon" id="icon-5">
+              <i class="mdi mdi-github-circle"></i>
+            </div>
+          </a>
+        </div>
+        <div class="info-box">
+          <div class="footnote">
+            CODEMENT <span class="highlight">&copy;2023</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+  </body>
+
+  <script src="{% static 'js/particles.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+
+  <!-- JS for Join now and sky is limit effects-->
+  <script src='https://codepen.io/Hyperplexed/pen/xxYJYjM/54407644e24173ad6019b766443bf2a6.js'></script>
+  <script src='https://codepen.io/Hyperplexed/pen/xxYJYjM/54407644e24173ad6019b766443bf2a6.js'></script>
+
+
+</html>
+
