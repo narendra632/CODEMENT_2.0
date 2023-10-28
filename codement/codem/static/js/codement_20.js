@@ -135,6 +135,9 @@ new NavigationPage();
 
 /* Hackathons and competitions JS logic  */
 
+
+
+/* Hackathons and competitions JS logic  */
 $(document).ready(function(){
   var zindex = 10;
   
@@ -178,6 +181,20 @@ $(document).ready(function(){
     }
     
   });
+
+
+  // add a click event listener to the document
+  $(document).click(function(e) {
+    // get the target of the click
+    var target = e.target;
+    // check if the target is not inside a card or a read more button
+    if (!target.closest(".card") && !target.closest(".btn.external")) {
+      // collapse the card by removing the show class
+      $("div.card.show").removeClass("show");
+      // reset the grid by removing the showing class
+      $("div.cards").removeClass("showing");
+    }
+  });
 });
 
 // define a function that takes the event and the element as parameters
@@ -189,3 +206,4 @@ function openLink(e, el) {
   // open the link in a new tab
   window.open(link, "_blank");
 }
+
