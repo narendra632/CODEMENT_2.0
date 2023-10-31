@@ -46,8 +46,8 @@ Vue.component('cardz', {
 
     },
     cardzBgTransform() {
-      const tX = this.mousePX * 0;
-      const tY = this.mousePY * 0;
+      const tX = this.mousePX * 40;
+      const tY = this.mousePY * -4;
       return {
         transform: `translateX(${tX}px) translateY(${tY}px)` };
 
