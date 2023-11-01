@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -475,15 +474,7 @@ div.card.show div.flap2 {
 
 
 
-
-
-
-
-
-
-/* Tools */
-
-
+/* Tools section cards design */
 
 
 .containerz {
@@ -537,7 +528,8 @@ div.card.show div.flap2 {
 .cardz-bg {
   opacity: 0.5;
   position: absolute;
-  zoom:2%;
+  left: -20px;
+  top: -20px;
   width: 100%;
   height: 100%;
   padding: 20px;
