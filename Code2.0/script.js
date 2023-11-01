@@ -40,14 +40,14 @@ Vue.component('cardz', {
     },
     cardzStyle() {
       const rX = this.mousePX * 30;
-      const rY = this.mousePY * 3;
+      const rY = this.mousePY * -30;
       return {
         transform: `rotateY(${rX}deg) rotateX(${rY}deg)` };
 
     },
     cardzBgTransform() {
       const tX = this.mousePX * 40;
-      const tY = this.mousePY * -4;
+      const tY = this.mousePY * -40;
       return {
         transform: `translateX(${tX}px) translateY(${tY}px)` };
 
