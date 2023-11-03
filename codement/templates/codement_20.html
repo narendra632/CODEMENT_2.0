@@ -128,20 +128,14 @@
         <h2 class="section_title">Programming Tools and Resources</h2>
 
         <div id="appz" class="containerz">
-
-          <cardz data-image='{% static 'assets/img/codepen.png' %}'>
-            <h1 slot="header">Codepen</h1>
-            <p slot="content">web-based editor for creating and sharing front-end web projects, with design inspiration and code snippets</p>
-          </cardz>
-          <cardz data-image='{% static 'assets/img/codepen.png' %}'>
-            <h1 slot="header">Codepen</h1>
-            <p slot="content">web-based editor for creating and sharing front-end web projects, with design inspiration and code snippets</p>
-          </cardz>
-          <cardz data-image='{% static 'assets/img/codepen.png' %}'>
-            <h1 slot="header">Codepen</h1>
-            <p slot="content">web-based editor for creating and sharing front-end web projects, with design inspiration and code snippets</p>
-          </cardz>
-           
+          {% for tool in tools %}
+          
+          <cardz data-image='{{ tool.image.url }}'>
+            <h1 slot="header" >{{ tool.name }}</h1>
+            <p slot="content"><a href="{{ tool.link }}" target="_blank" style="text-decoration: none; color: white;">{{ tool.description }}</a></p>
+          </cardz> 
+          
+          {% endfor %}
         </div>
 
       </section>

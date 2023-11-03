@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 
 from django.contrib import messages
 
-from .models import Contact, Hackathon
+from .models import Contact, Hackathon, Tool
 
 from django.core.mail import send_mail
 
@@ -30,8 +30,9 @@ def index(request):
 
 def codement_20(request):
     hackathons = Hackathon.objects.all()
+    tools = Tool.objects.all()
 
-    return render(request,"codement_20.html",{'hackathons': hackathons}) 
+    return render(request,"codement_20.html",{'hackathons': hackathons, 'tools': tools}) 
 
 
 

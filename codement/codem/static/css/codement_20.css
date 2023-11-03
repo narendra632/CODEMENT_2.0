@@ -541,7 +541,7 @@ div.card.show div.flap2 {
 }
 
 .cardz-info {
-  padding: 20px;
+  padding: 15px;
   position: absolute;
   bottom: 0;
   color: #fff;
@@ -573,7 +573,7 @@ div.card.show div.flap2 {
 }
 
 .cardz-info h1 {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
