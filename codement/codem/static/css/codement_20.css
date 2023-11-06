@@ -51,6 +51,17 @@ h1:hover {
   color: #ff0266;
 }
 
+@media screen and (max-width: 480px) {
+
+  .codement {
+    font-size: 7vw !important;
+    padding-bottom: 5rem !important;
+    letter-spacing: 0.7rem !important;
+  }
+}
+
+
+
 .slider .section_title {
   font-size: 2vw;
   letter-spacing: 0.3rem;
@@ -67,6 +78,17 @@ h3.span {
   color: #faebd7;
   z-index: 4;
 }
+
+
+@media screen and (max-width: 480px) {
+
+  .forCoders {
+    font-size: 16px !important;
+    letter-spacing: 0px !important;
+  }
+}
+
+
 span:hover {
   color: #ff0266;
   font-weight: 500;
@@ -118,6 +140,7 @@ a {
     letter-spacing: 0px !important;
   }
 }
+
 
 .nav-tab:hover {
   color: #1e1f26;
@@ -175,6 +198,16 @@ a {
     font-size: 2vw;
   }
 }
+
+
+@media screen and (max-width: 480px) {
+
+  .codeTitle {
+    font-size: 26px !important;
+    
+  }
+}
+
 
 @media screen only (min-width: 360px) {
   .nav h1,
