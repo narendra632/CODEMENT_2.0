@@ -3,35 +3,33 @@
   <head>
     {% load static %}
 
-    <meta charset="UTF-8" />
-    <title>Codement - Environment for Coders</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="sara mazal lessons" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, mazal, icons" />
-    <meta name="author" content="Sara Mazal" />
+    <title>CODEMENT</title>
 
+    <meta charset="UTF-8">
+    <meta name="description" content="This is where you best best tools and resouces to kick start your career in tech domains, also notable hackathons and Competitions worth participating">
+    <meta name="keywords" content="programming tools, notable hackathons, coding comepetitions, coding events, list of coding tools">
+    <meta name="author" content="Narendra Singh Rathore">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="INDEX, FOLLOW">
+
+    <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
-    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
-    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
     
     <link rel="stylesheet" href="{% static 'css/codement_20.css' %}" />
-
-    
     
   </head>
   <body>
-    <!-- partial:index.partial.html -->
+
+    <!-- HOME -->
     <sectio class="nav">
       <h1 class="codement">CODEMENT 2.0</h1>
       <br>
       <br>
-
       <h3 class="span loader forCoders">
         <span class="m">E</span>
         <span class="m">N</span>
@@ -56,13 +54,12 @@
         <span class="m">R</span>
         <span class="m">S</span>
       </h3>
-
       <div class="nav-container">
-        <a class="nav-tab-home" href="/"> Codement</a>
-        <a class="nav-tab" href="#tab-esbuild">Hackathons</a>
-        <a class="nav-tab" href="#tab-next">Tools</a>
-        <a class="nav-tab" href="#tab-typescript">Events</a>
-        <a class="nav-tab" href="#tab-vite">Projects</a>
+        <a class="nav-tab-home" href="/"> CODEMENT</a>
+        <a class="nav-tab" href="#tab-esbuild">HACKATHONS</a>
+        <a class="nav-tab" href="#tab-next">TOOLS</a>
+        <a class="nav-tab" href="#tab-typescript">EVENTS</a>
+        <a class="nav-tab" href="#tab-vite">PROJECTS</a>
         <span class="nav-tab-slider"></span>
       </div>
     </sectio>
@@ -70,28 +67,23 @@
 
     <main  style="overflow-x: clip" class="main">
 
-
-      
       <section class="slider" id="tab-svelte">
         <h1></h1>
       </section>
 
+
+      <!-- HACKATHONS -->
       <section class="slider" id="tab-esbuild">
-        <h1></h1>
+        <h1>HACKATHONS</h1>
         <h2 class="section_title codeTitle">
           Competitions & Hackathons worth participating
         </h2>
-
-        <!-- partial:index.partial.html -->
         <div class="cards">
+
           {% for hackathon in hackathons %}
           <div class="card">
             <div class="card__image-holder">
-              <img
-                class="card__image"
-                src="{{ hackathon.image.url }}"
-                alt="{{ hackathon.name }}"
-              />
+              <img class="card__image" src="{{ hackathon.image.url }}" alt="{{ hackathon.name }}"/>
             </div>
             <div class="card-title">
               <a href="#" class="toggle-info btn">
@@ -107,47 +99,37 @@
               <div class="card-description">{{ hackathon.description }}</div>
               <div class="card-flap flap2">
                 <div class="card-actions">
-                  <a
-                    href="{{ hackathon.link }}"
-                    class="btn external"
-                    onclick="openLink(event, this)"
-                    target="_blank"
-                    >Learn more</a
-                  >
+                  <a href="{{ hackathon.link }}" class="btn external" onclick="openLink(event, this)" target="_blank">Learn more</a>
                 </div>
               </div>
             </div>
           </div>
           {% endfor %}
-        </div>
 
-        <!-- partial -->
+        </div>
       </section>
       
 
+      <!-- TOOLS -->
       <section class="slider" id="tab-next">
-        <h1></h1>
+        <h1>TOOLS</h1>
         <h2 class="section_title codeTitle">Programming Tools and Resources</h2>
-
         <div id="appz" class="containerz">
-          {% for tool in tools %}
-          
+
+          {% for tool in tools %} 
           <cardz data-image='{{ tool.image.url }}'>
             <h1 slot="header" >{{ tool.name }}</h1>
             <p slot="content"><a href="{{ tool.link }}" target="_blank" style="text-decoration: none; color: white;">{{ tool.description }}</a></p>
           </cardz> 
-          
           {% endfor %}
-        </div>
 
+        </div>
       </section>
 
 
-
-
-
+      <!-- EVENTS -->
       <section class="slider" id="tab-typescript">
-        <h1></h1>
+        <h1>EVENTS</h1>
         <h2 class="section_title codeTitle">Ongoing/Upcoming Events</h2>
         <div>
           <br>
@@ -159,26 +141,17 @@
       </section>
 
 
-
-
-
-
+      <!-- PROJECTS -->
       <section class="slider" id="tab-vite">
-        <h1></h1>
+        <h1>PROJECTS</h1>
         <h2 class="section_title codeTitle">Projects Under development by our Team</h2>
-        
       </section>
 
 
-
-      
-
-
-
     </main>
-    <canvas class="background"></canvas
-    ><!-- SGVsbG8hIE15IG5hbWUgaXMgU2FyYSBNYXphbC4gV2VsY29tZSB0byBteSBDb2RlUGVuIQ== -->
-    <!-- partial -->
+
+
+    <canvas class="background"></canvas>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
    
@@ -186,10 +159,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
-    
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
 
-
     <script src="{% static 'js/codement_20.js' %}"></script>
+
   </body>
 </html>

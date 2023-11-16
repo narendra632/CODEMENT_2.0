@@ -64,7 +64,7 @@ h1:hover {
 
 .slider .section_title {
   font-size: 2vw;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   font-family: "ROBOTO", sans-serif;
   font-weight: 300;
   color: #faebd7;
@@ -203,7 +203,7 @@ a {
 @media screen and (max-width: 480px) {
 
   .codeTitle {
-    font-size: 26px !important;
+    font-size: 18px !important;
     
   }
 }
