@@ -2,12 +2,14 @@ from django.shortcuts import render, get_object_or_404
 
 from django.contrib import messages
 
-from .models import Contact, Hackathon, Tool
+from .models import Contact, Hackathon, Tool, Channel
 
 from django.core.mail import send_mail
 
 
 def index(request):
+    channels = Channel.objects.all()
+
     if request.method == 'POST':
         name = request.POST.get('name', '')
         email = request.POST.get('email', '')
@@ -22,10 +24,10 @@ def index(request):
             subject,
             f"Name: {name}\nEmail: {email}\nMessage: {message}",
             email,
-            ['wiseangle13@gmail.com'], # your email address
+            ['codement13@gmail.com'], # your email address
             fail_silently=True,
         )
-    return render(request, "index.html")
+    return render(request, "index.html", {'channels': channels})
 
 
 def codement_20(request):

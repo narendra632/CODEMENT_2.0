@@ -11,9 +11,19 @@ class Contact(models.Model):
         return self.name
 
 
+class Channel(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='channels')
+    description = models.TextField()
+    link = models.URLField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+
 class Hackathon(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='')
+    image = models.ImageField(upload_to='hackathons')
     description = models.TextField()
     by = models.CharField(max_length=100)
     link = models.URLField(max_length=200)
@@ -25,7 +35,7 @@ class Hackathon(models.Model):
 class Tool(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField(upload_to='')
+    image = models.ImageField(upload_to='tools')
     link = models.URLField(max_length=200, default="")
 
     def __str__(self):

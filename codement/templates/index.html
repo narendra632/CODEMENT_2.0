@@ -196,34 +196,31 @@
             </div>
 
             <div class="flex row-gt-sm">
-              <div class="flex row-gt-sm ">
-                <div class="flex bullet-wrap "  style="padding-right: 40px; padding-left: 40px;" >
-                  <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay="0.6s">
-                    <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/Open-Source" target="_blank">
-                      <img src="{% static 'assets/img/codement_open_source.png' %}" alt="" height="85px" width="110px">
-                    </a>
-                  </div>
-                  <br>
-                  <div class="waypoint" data-animation="fade-in" data-delay="0.6s">
-                    <div class=" bold">Open Source</div>
-                  </div>
+              
+              <div class="flex bullet-wrap "  style="padding-right: 40px; padding-left: 40px;" >
+                <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay="0.6s">
+                  <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/Open-Source" target="_blank">
+                    <img src="{% static 'assets/img/codement_open_source.png' %}" alt="" height="85px" width="110px">
+                  </a>
+                </div>
+                <br>
+                <div class="waypoint" data-animation="fade-in" data-delay="0.6s">
+                  <div class=" bold">Open Source</div>
                 </div>
               </div>
-
-              <div class="flex row-gt-sm ">
-                <div class="flex bullet-wrap "  style="padding-right: 40px;  padding-left: 40px;" >
-                  <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay="0.8s">
-                    <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/Blockchain" target="_blank">
-                      <img src="{% static 'assets/img/codement_blockchain.png' %}" alt="" height="85px" width="110px">
-                    </a>
-                  </div>
-                  <br>
-                  <div class="waypoint" data-animation="fade-in" data-delay="0.8s">
-                    <div class=" bold">Blockchain</div>
-                  </div>
+              
+              <div class="flex bullet-wrap "  style="padding-right: 40px;  padding-left: 40px;" >
+                <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay="0.8s">
+                  <a href="https://github.com/WeMakeDevs/roadmaps/tree/main/Blockchain" target="_blank">
+                    <img src="{% static 'assets/img/codement_blockchain.png' %}" alt="" height="85px" width="110px">
+                  </a>
+                </div>
+                <br>
+                <div class="waypoint" data-animation="fade-in" data-delay="0.8s">
+                  <div class=" bold">Blockchain</div>
                 </div>
               </div>
-
+    
               <div class="flex bullet-wrap " style="padding-right: 40px;  padding-left: 40px;">
                 <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay="1s">
                   <a href="https://github.com/s0md3v/be-a-hacker" target="_blank">
@@ -235,6 +232,7 @@
                   <div class="bold">Cyber Security &<br>Ethical Hacking</div>
                 </div>
               </div>
+              
             </div>
 
           </div>
@@ -491,67 +489,23 @@
 
           <div class="flex row wrap">
 
+            {% for channel in channels %}
             <div class="flex row-gt-sm">
-              <a href="https://www.youtube.com/@CodeWithHarry" target="_blank">
+              <a href="{{ channel.link }}" target="_blank">
                 <div class="blog-wrap waypoint" data-animation="fade-in">
                   <div class="fade-wrap">
-                    <div class="thumb channels" style="background-image: url('{% static "assets/img/blog-1.jpg" %}');"></div>
-                    <div class="label bold">Code With Harry</div>
+                    <div class="thumb channels" style="background-image: url('{{ channel.image.url }}');"></div>
+                    <div class="label bold">{{ channel.name }}</div>
                     <div class="bar"></div>
                     <div class="text">
-                      God of Programming, Best quality courses in hindi about Python, Java, Javascript, App Dev, Web Dev & what not. Project
-                      based learning.
+                      {{ channel.description }}
                     </div>
                   </div>
                 </div>
               </a>
             </div>
+            {% endfor %}
 
-            <div class="flex row-gt-sm"> 
-              <a href="https://www.youtube.com/@javascriptmastery" target="_blank">
-                <div class="blog-wrap waypoint" data-animation="fade-in" data-delay=".2s">
-                  <div class="fade-wrap">
-                    <div class="thumb channels" style="background-image: url('{% static "assets/img/blog-2.jpg" %}');">  </div>
-                    <div class="label bold">JavaScript Mastery</div>
-                    <div class="bar"></div>
-                    <div class="text">
-                      It is the ultimate YouTube channel for learning JavaScript. With realistic projects and expert guidance, 
-                      you’ll master modern web development and frameworks like React, Next.js, and Node.js.
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="flex row-gt-sm">
-              <a href="https://www.youtube.com/@freecodecamp" target="_blank">
-                <div class="blog-wrap waypoint" data-animation="fade-in" data-delay=".4s">
-                  <div class="fade-wrap">
-                    <div class="thumb channels" style="background-image: url('{% static "assets/img/blog-3.jpg" %}');"></div>
-                    <div class="label bold">FreeCodeCamp</div>
-                    <div class="bar"></div>
-                    <div class="text">
-                      Preety much everything about coding in English. Devops, Cyber Security, Game development with python & Unity.
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="flex row-gt-sm">
-              <a href="https://www.youtube.com/@CodingNinjasIndia/featured" target="_blank">
-                <div class="blog-wrap waypoint" data-animation="fade-in" data-delay=".6s">
-                  <div class="fade-wrap">
-                    <div class="thumb channels" style="background-image: url('{% static "assets/img/blog-4.jpg" %}');"></div>
-                    <div class="label bold">Coding Ninjas</div>
-                    <div class="bar"></div>
-                    <div class="text">Professional platform for learning data Science & DSA. Provides great certified courses
-                      and complete placement assistance.
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
 
           </div>
         </div>
