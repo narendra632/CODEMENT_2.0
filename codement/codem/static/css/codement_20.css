@@ -517,8 +517,6 @@ div.card.show div.flap2 {
 
 
 
-
-
 /* Tools section cards design */
 
 
@@ -622,3 +620,563 @@ div.card.show div.flap2 {
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Coming Soon */
+
+
+@font-face {
+  font-family: 'Denk One';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/denkone/v19/dg4m_pzhrqcFb2IzRNtAr7w.ttf) format('truetype');
+}
+
+.comming {
+  background-color: #1e1f26;
+  color: transparent !important;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  font-family: 'Denk One', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 5em !important;
+  position: relative;
+  
+ 
+  -webkit-animation: horror-animation 5s infinite;
+  -moz-animation: horror-animation 5s infinite;
+  -o-animation: horror-animation 5s infinite;
+  animation: horror-animation 5s infinite;
+}
+
+@-webkit-keyframes horror-animation {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    left: 1%;
+    top: 36%;
+  }
+  5% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: 0%;
+    top: 35%;
+  }
+  10% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    left: -1%;
+    top: 34%;
+  }
+  15% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+    top: 35%;
+  }
+  16% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  17% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+  }
+  20% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: -1%;
+  }
+  25% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: -1%;
+  }
+  30% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    left: 0%;
+  }
+  35% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 0%;
+  }
+  36% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  37% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 0%;
+  }
+  40% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+    left: 1%;
+  }
+  45% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 1%;
+  }
+  50% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    left: 1%;
+  }
+  55% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: 0%;
+  }
+  56% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  57% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: 2%;
+  }
+  60% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: 0%;
+  }
+  65% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+  }
+  70% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    left: -1%;
+  }
+  75% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: -1%;
+  }
+  76% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  77% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: -1%;
+  }
+  80% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    left: -1%;
+  }
+  85% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    left: 1%;
+  }
+  86% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  87% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    left: 1%;
+  }
+  90% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    left: 1%;
+  }
+  95% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 1%;
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: 0%;
+  }
+}
+@-moz-keyframes horror-animation {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    left: 1%;
+    top: 36%;
+  }
+  5% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: 0%;
+    top: 35%;
+  }
+  10% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    left: -1%;
+    top: 34%;
+  }
+  15% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+    top: 35%;
+  }
+  16% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  17% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+  }
+  20% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: -1%;
+  }
+  25% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: -1%;
+  }
+  30% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    left: 0%;
+  }
+  35% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 0%;
+  }
+  36% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  37% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 0%;
+  }
+  40% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+    left: 1%;
+  }
+  45% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 1%;
+  }
+  50% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    left: 1%;
+  }
+  55% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: 0%;
+  }
+  56% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  57% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: 2%;
+  }
+  60% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: 0%;
+  }
+  65% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+  }
+  70% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    left: -1%;
+  }
+  75% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: -1%;
+  }
+  76% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  77% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: -1%;
+  }
+  80% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    left: -1%;
+  }
+  85% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    left: 1%;
+  }
+  86% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  87% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    left: 1%;
+  }
+  90% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    left: 1%;
+  }
+  95% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 1%;
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: 0%;
+  }
+}
+@-o-keyframes horror-animation {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    left: 1%;
+    top: 36%;
+  }
+  5% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: 0%;
+    top: 35%;
+  }
+  10% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    left: -1%;
+    top: 34%;
+  }
+  15% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+    top: 35%;
+  }
+  16% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  17% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+  }
+  20% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: -1%;
+  }
+  25% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: -1%;
+  }
+  30% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    left: 0%;
+  }
+  35% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 0%;
+  }
+  36% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  37% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 0%;
+  }
+  40% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+    left: 1%;
+  }
+  45% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 1%;
+  }
+  50% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    left: 1%;
+  }
+  55% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: 0%;
+  }
+  56% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  57% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: 2%;
+  }
+  60% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: 0%;
+  }
+  65% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+  }
+  70% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    left: -1%;
+  }
+  75% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: -1%;
+  }
+  76% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  77% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: -1%;
+  }
+  80% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    left: -1%;
+  }
+  85% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    left: 1%;
+  }
+  86% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  87% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    left: 1%;
+  }
+  90% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    left: 1%;
+  }
+  95% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 1%;
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: 0%;
+  }
+}
+@keyframes horror-animation {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    left: 1%;
+    top: 36%;
+  }
+  5% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: 0%;
+    top: 35%;
+  }
+  10% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    left: -1%;
+    top: 34%;
+  }
+  15% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+    top: 35%;
+  }
+  16% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  17% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+  }
+  20% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: -1%;
+  }
+  25% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: -1%;
+  }
+  30% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    left: 0%;
+  }
+  35% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 0%;
+  }
+  36% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  37% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 0%;
+  }
+  40% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+    left: 1%;
+  }
+  45% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    left: 1%;
+  }
+  50% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    left: 1%;
+  }
+  55% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: 0%;
+  }
+  56% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  57% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    left: 2%;
+  }
+  60% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: 0%;
+  }
+  65% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 0%;
+  }
+  70% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    left: -1%;
+  }
+  75% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: -1%;
+  }
+  76% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  77% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    left: -1%;
+  }
+  80% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    left: -1%;
+  }
+  85% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    left: 1%;
+  }
+  86% {
+    text-shadow: 0 0 5px #212121;
+    left: 0%;
+  }
+  87% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    left: 1%;
+  }
+  90% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    left: 1%;
+  }
+  95% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    left: 1%;
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    left: 0%;
+  }
+}
+
