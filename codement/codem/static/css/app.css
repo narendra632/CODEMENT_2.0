@@ -289,11 +289,9 @@ body {
   --right-color: var(--c2);
 }
 
-
-
 .side {
   display: grid;
-  height: 60vh;
+  height: 35vh;
   overflow: hidden;
   place-items: center;
   position: absolute;

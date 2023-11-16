@@ -2,13 +2,14 @@ from django.shortcuts import render, get_object_or_404
 
 from django.contrib import messages
 
-from .models import Contact, Hackathon, Tool, Channel
+from .models import Contact, Hackathon, Tool, Channel, Roadmap
 
 from django.core.mail import send_mail
 
 
 def index(request):
     channels = Channel.objects.all()
+    roadmaps = Roadmap.objects.all()
 
     if request.method == 'POST':
         name = request.POST.get('name', '')
@@ -27,7 +28,7 @@ def index(request):
             ['codement13@gmail.com'], # your email address
             fail_silently=True,
         )
-    return render(request, "index.html", {'channels': channels})
+    return render(request, "index.html", {'channels': channels , 'roadmaps': roadmaps})
 
 
 def codement_20(request):

@@ -11,6 +11,15 @@ class Contact(models.Model):
         return self.name
 
 
+class Roadmap(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='roadmaps')
+    link = models.URLField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+
 class Channel(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='channels')
