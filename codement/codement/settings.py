@@ -17,25 +17,44 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# reading .env file
+import environ
+env = environ.Env()
+environ.Env.read_env(env_file=BASE_DIR / ".env")
+
+
+# setting up secret key from .env file
+SECRET_KEY = env("SECRET_KEY")
+
 # Email settings to send self mail
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'mrperfectth7@gmail.com'
-EMAIL_HOST_PASSWORD = 'kzamaqguggicaehb'
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'mrperfectth7@gmail.com'
+EMAIL_HOST = env("EMAIL_HOST")
+EMAIL_PORT = env("EMAIL_PORT")
+EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+EMAIL_USE_TLS = env("EMAIL_USE_TLS")
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
+
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-!)%$r&b&uq83#ezz@l%j4xn)0to+f8_zw&pm1v(11h@#6w&k7+"
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# PRODUCTION SETTINGS
+
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
+
+#SECURE_HSTS_SECONDS = 31536000 # one year
+SECURE_HSTS_PRELOAD = False
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+
 
 
 # Application definition
