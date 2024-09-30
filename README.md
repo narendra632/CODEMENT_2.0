@@ -3,6 +3,9 @@
 
 CODEMENT 2.0 is the upgraded version of CODEMENT, a comprehensive learning platform for coders of all skill levels. It is a website that helps you learn and master various tech fields, such as web development, app development, blockchain, and more. You can access roadmaps and guides that are curated by experts and mentors, and follow them at your own pace. Whether you are a beginner who wants to start coding, or an experienced developer who wants to learn a new skill, CODEMENT 2.0 has something for you.
 
+## Website link
+- visit - https://www.codement.tech/
+
 ## Features
 
 - Sleek and modern design with custom CSS styling and animations
@@ -22,9 +25,6 @@ This project was built using the following technologies:
 - CSS: A style sheet language for designing web pages
 - SQLite: A lightweight database management system
 - PythonAnywhere for hosting
-
-## Website link
-- visit - https://codement.pythonanywhere.com/
 
 ## Acknowledgements
 
